@@ -4,7 +4,8 @@
   "description": "crypto portfolio with Binance",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx ts-node index.ts"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "typescript": "^5.4.3"
   },
   "dependencies": {
+    "@binance/connector-typescript": "^0.3.6",
     "express": "^4.19.2"
   }
 }
