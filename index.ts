@@ -19,17 +19,20 @@ const app = express();
 const PORT = 3000;
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("Olá, mundo!");
+  // res.send("Olá, mundo!");
 
   const client = new Spot(API_KEY, API_SECRET, { baseURL: BASE_URL });
   client
-    .exchangeInformation()
+    .depositHistory()
     .then((res) => {
       console.log(res);
     })
     .catch((err) => {
       console.log(err);
     });
+    
+    res.send(client)
+
 });
 
 app.listen(PORT, () => {
